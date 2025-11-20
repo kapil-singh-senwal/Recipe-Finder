@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">🍳 Recipe Finder</h1>
+                <div class="nav-links">
+                    <a href="#" id="homeBtn" class="nav-link active">Home</a>
+                    <a href="#" id="favBtn" class="nav-link">Favorites <span id="favCount">0</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="homeSection" class="section active">
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search for recipes..." autocomplete="off">
+                    </div>
+                    <div id="suggestions" class="suggestions"></div>
+                </div>
+                
+                <div id="recipesContainer" class="recipes-container">
+                    <div class="welcome-message">
+                        <h2>Welcome to Recipe Finder!</h2>
+                        <p>Start typing to search for delicious recipes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Favorites Section -->
+        <section id="favSection" class="section">
+            <div class="container">
+                <h2>Your Favorite Recipes</h2>
+                <div id="favoritesContainer" class="recipes-container">
+                    <div class="no-favorites">
+                        <p>No favorite recipes yet. Start exploring and add some!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe Detail Modal -->
+        <div id="recipeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="recipeDetail"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
